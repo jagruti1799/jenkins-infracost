@@ -1,6 +1,6 @@
 resource "azurerm_virtual_network" "vnet" {
   name                = "myvnet"
-  address_space       = ["10.0.0.0/16"]
+  address_space       = ["0.0.0.0/0"]
   location            = var.location
   resource_group_name = "EIC-DevOps-RG"
 }

@@ -3,5 +3,5 @@ projectKey=jagruti1799_jenkins-infracost
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.35306
 dashboardUrl=https://sonarcloud.io/dashboard?id=jagruti1799_jenkins-infracost
-ceTaskId=AYTsGNFdY7DieCzZGWSq
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYTsGNFdY7DieCzZGWSq
+ceTaskId=AYTsIy9pNCTlW_vjLZNT
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYTsIy9pNCTlW_vjLZNT
