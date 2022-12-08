@@ -33,6 +33,7 @@ resource "azurerm_virtual_machine" "vm" {
   os_profile {
     computer_name  = "Linux"
     admin_username = "adminuser"
+    admin_password = "Password1234!"
   }
 
   os_profile_linux_config {
@@ -42,12 +43,19 @@ resource "azurerm_virtual_machine" "vm" {
      key_data = tls_private_key.webkey.public_key_openssh
     }
 }
-      connection {
-      type = "ssh"
-      user = "adminuser"
-      host = azurerm_public_ip.publicip.ip_address
-      private_key = tls_private_key.webkey.private_key_pem
-       } 
+      # connection {
+      # type = "ssh"
+      # user = "adminuser"
+      # host = azurerm_public_ip.publicip.ip_address
+      # private_key = tls_private_key.webkey.private_key_pem
+      #  } 
+
+    connection {
+    type     = "ssh"
+    user     = "root"
+    password = "Password1234!"
+    host = azurerm_public_ip.publicip.ip_address
+  }
 
    provisioner "local-exec" {
     command = "chmod 600 webkey.pem"
